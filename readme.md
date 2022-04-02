@@ -19,7 +19,7 @@ poetry install
 To run the program:
 
 ```bash
-poetry run src/main.py text/moby-dick.txt
+poetry run challenge/main.py text/moby-dick.txt
 ```
 
 # Some Packages used and links to the documentation:

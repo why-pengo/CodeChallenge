@@ -59,7 +59,7 @@ of the whale - 67
 
 ## Code Structure/Style Requirements
 
-* The program should be well structured and understandable. This is purposefully a bit vague, but generally we're looking for:
+* The program should be well-structured and understandable. This is purposefully a bit vague, but generally we're looking for:
   - Encapsulation
   - Separation of concerns
   - Understandability

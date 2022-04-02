@@ -24,8 +24,8 @@ poetry run challenge/main.py text/moby-dick.txt
 
 # Some Packages used and links to the documentation:
 
-* [Click](https://click.palletsprojects.com/en/8.1.x/#) for cli args
-* [NLTK](https://www.nltk.org/install.html) Natural Language tool kit
+* [Click](https://click.palletsprojects.com/en/8.1.x/#) Command Line Interface Creation Kit
+* [NLTK](https://www.nltk.org/install.html) Natural Language Processing
 
 
 

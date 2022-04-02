@@ -1,8 +1,10 @@
 ## General Description
 
-Welcome! Please create a program executable from the command line that when given text(s) will return 100 of most common three word sequences in descending order of frequency.
+Welcome! Please create a program executable from the command line that when given text(s) will return 
+100 of most common three word sequences in descending order of frequency.
 
-For example, if I ran `ruby ./solution.rb texts/moby_dick.txt` or `java main.java texts/moby_dick.txt` the first lines of the result would (probably) be:
+For example, if I ran `ruby ./solution.rb texts/moby_dick.txt` or `java main.java texts/moby_dick.txt` 
+the first lines of the result would (probably) be:
 
 ```
 the sperm whale - 85
@@ -31,10 +33,10 @@ of the whale - 67
 
 * The program is written in Python (or another object oriented programming language) 
 * The program has a README with instructions for running the program and the tests
-* The program accepts a list of one *or more* file paths (e.g. `ruby solution.rb texts/moby-dick.txt brothers-karamazov.txt ...).`
+* The program accepts a list of one *or more* file paths (e.g. `ruby solution.rb texts/moby-dick.txt brothers-karamazov.txt ...`).
 * The program *also* accepts input via stdin (e.g. `cat texts/*.txt | java solution.java`).
 * The program outputs the first 100 most common three word sequences.
-* The program ignores punctuation, line endings, and is case insensitive
+* The program ignores punctuation, line endings, and is case-insensitive
   - `“I love\nsandwiches.”` should be treated the same as `"(I LOVE SANDWICHES!!)"`).
   - Contractions shouldn't be changed into two words (eg. `can't` should not become `can t`).
   - Hyphens on line-endings can be treated as continuations OR punctuation.

@@ -26,7 +26,6 @@ poetry run challenge/main.py text/moby-dick.txt
 
 * [Click](https://click.palletsprojects.com/en/8.1.x/#) for cli args
 * [NLTK](https://www.nltk.org/install.html) Natural Language tool kit
-* [Rich](https://github.com/Textualize/rich) Rich Textual interface
 
 
 

@@ -2,6 +2,7 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize, PunktSentenceTokenizer
 from collections import Counter
 from itertools import chain
+import string
 
 
 class ProcessText:
@@ -9,9 +10,15 @@ class ProcessText:
 
     def __init__(self, text):
         nltk.download('punkt', quiet=True)
-        nltk.download('averaged_perceptron_tagger')
+        nltk.download('averaged_perceptron_tagger', quiet=True)
         self.__sentences = sent_tokenize(text)
-        self.__words = word_tokenize(text)
+        import re
+        no_punct = re.sub("’", '', text)       # Strange encoding
+        no_punct = re.sub("”", '', no_punct)   # Strange encoding
+        no_punct = re.sub("“", '', no_punct)   # Strange encoding
+        translator = str.maketrans('', '', string.punctuation)
+        no_punct = no_punct.translate(translator)
+        self.__words = word_tokenize(no_punct)
         self.__tagged = None
         self.__phrases = None
         self.__top100 = None
@@ -23,12 +30,8 @@ class ProcessText:
         return self.__words
 
     def process(self):
-        # grammar = "NP: {<DT><JJ>*<NN>}"
-        # cp = nltk.RegexpParser(grammar)
-        # self.__tagged = nltk.pos_tag_sents(word_tokenize(sent) for sent in self.__sentences)
-        # self.__phrases = cp.parse(self.__tagged[0])
         self.__phrases = list(nltk.trigrams(self.__words))
-        self.__top100 = Counter(chain(self.__phrases)).most_common(10)
+        self.__top100 = Counter(chain(self.__phrases)).most_common(100)
 
     def get_tagged(self):
         return self.__tagged

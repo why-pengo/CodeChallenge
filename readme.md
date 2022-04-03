@@ -1,8 +1,12 @@
 # Getting started
 
-## Poetry
+## Github link
 
-This project uses the [poetry](https://python-poetry.org/docs/) package and virtual environment manager.
+[Github repo](https://github.com/why-pengo/CodeChallenge)
+
+## To run this code
+
+This project uses the [poetry](https://python-poetry.org/docs/) package and virtual environment manager for Python.
 
 To install poetry:
 
@@ -19,14 +23,26 @@ poetry install
 To run the program:
 
 ```bash
-poetry run main.py text/moby-dick.txt
+poetry run python main.py text/moby-dick.txt
+```
+
+Alternative way to run the program is inside the virtual environment:
+
+```bash
+poetry shell
+python main.py --help
+python main.py text/moby-dick.txt
 ```
 
 To get cli help:
 
 ```bash
-poetry run main.py --help
+poetry run python main.py --help
 ```
+
+## Bugs
+
+Currently, very hacky workaround to some strange text encoding of punctuation.
 
 # Some Packages used and links to the documentation:
 

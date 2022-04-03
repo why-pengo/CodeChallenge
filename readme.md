@@ -19,7 +19,13 @@ poetry install
 To run the program:
 
 ```bash
-poetry run challenge/main.py text/moby-dick.txt
+poetry run main.py text/moby-dick.txt
+```
+
+To get cli help:
+
+```bash
+poetry run main.py --help
 ```
 
 # Some Packages used and links to the documentation:
